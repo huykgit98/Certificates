@@ -79,6 +79,7 @@ After clearing your account, you'll start from a clean slate, and you can run ma
 
 ```
 fastlane match appstore
+fastlane match distribution
 fastlane match development
 ```
 
