@@ -44,6 +44,39 @@ fastlane match enterprise
 
 For more information open [fastlane match git repo](https://docs.fastlane.tools/actions/match/)
 
+### New machine
+
+To set up the certificates and provisioning profiles on a new machine, you just run the same command using:
+
+fastlane match development
+You can also run match in a readonly mode to be sure it won't create any new certificates or profiles.
+
+fastlane match development --readonly
+We recommend to always use readonly mode when running fastlane on CI systems. This can be done using
+
+lane :beta do
+  match(type: "appstore", readonly: is_ci)
+
+  gym(scheme: "Release")
+end
+
+### Renew an expired certificate
+
+Nuke command revoke your certificates and provisioning profiles, which leave you a clean slate for a new beginning.
+
+```
+fastlane match nuke development
+fastlane match nuke distribution
+fastlane match nuke enterprise
+```
+
+After clearing your account, you'll start from a clean slate, and you can run match to generate your certificates and profiles again.
+
+```
+fastlane match appstore
+fastlane match development
+```
+
 ### Content
 
 #### certs
