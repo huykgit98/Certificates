@@ -42,6 +42,25 @@ fastlane match development
 fastlane match enterprise
 ```
 
+### Renew an expired certificate
+
+Nuke command revoke your certificates and provisioning profiles, which leave you a clean slate for a new beginning.
+
+```
+fastlane match nuke development
+fastlane match nuke distribution
+fastlane match nuke enterprise
+```
+
+After clearing your account, you'll start from a clean slate, and you can run match to generate your certificates and profiles again.
+
+```
+fastlane match appstore
+fastlane match adhoc
+fastlane match development
+```
+
+
 For more information open [fastlane match git repo](https://docs.fastlane.tools/actions/match/)
 
 ### Content
