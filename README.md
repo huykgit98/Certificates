@@ -65,6 +65,23 @@ lane :beta do
 end
 ```
 
+### Renew an expired certificate
+
+Nuke command revoke your certificates and provisioning profiles, which leave you a clean slate for a new beginning.
+
+```
+fastlane match nuke development
+fastlane match nuke distribution
+fastlane match nuke enterprise
+```
+
+After clearing your account, you'll start from a clean slate, and you can run match to generate your certificates and profiles again.
+
+```
+fastlane match appstore
+fastlane match development
+```
+
 ### Registering new devices
 
 By using match, you'll save a lot of time every time you add new device to your Ad Hoc or Development profiles. Use match in combination with the register_devices action.
