@@ -46,10 +46,16 @@ fastlane match enterprise
 
 To set up the certificates and provisioning profiles on a new machine, you just run the same command using:
 
+```
 fastlane match development
+```
+
 You can also run match in a readonly mode to be sure it won't create any new certificates or profiles.
 
+```
 fastlane match development --readonly
+```
+
 We recommend to always use readonly mode when running fastlane on CI systems. This can be done using
 
 ```
@@ -102,6 +108,7 @@ fastlane match adhoc --force_for_new_devices
 For more information open [fastlane match git repo](https://docs.fastlane.tools/actions/match/)
 
 ### Content
+Passphrase: ```buvaty```
 
 #### certs
 
